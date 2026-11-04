@@ -1,50 +1,26 @@
-# Expertium (esqueleto)
+# Expertium: a verifiable industrial knowledge engine
 
-Flujo de 4 agentes (Knowledge, Quality, CAPA, Audit) sobre Meta Model API (Spark 1.3).
+Expertium turns a manufacturing non-conformity into a traceable quality file: sourced answers, a corrective-action proposal, human approval, and a tamper-evident audit trail. Built solo by Luis Herrera (Peru) for the Meta Global AI Developer Hackathon, Indie track.
 
-## Ficheros
+## How it works
+Four agents share one model, Muse Spark 1.3 on Meta Model API, with structured outputs:
+1. **Knowledge** finds the applicable procedure and cites the source section.
+2. **Quality** checks the case against the retrieved criteria.
+3. **CAPA** proposes corrective and preventive actions with owner and due date, then waits for human approval.
+4. **Audit** compiles decisions, sources and approvals into a hash-chained quality file.
 
-- `llm.py`: `call_agent(rol, entrada, esquema_pydantic)` contra API compatible OpenAI.
-- `ledger.py`: SQLite append-only con hash SHA-256 encadenado + `verify_chain()`.
-- `app.py`: Streamlit de 5 pasos con salidas simuladas.
-- `smoke_test.py`: llamada real a Spark, imprime respuesta y tokens.
+## Measured results
+- Cost per case: about $[X]
+- Latency: about [Y] s per agent step
+- Backend tests: `pytest` in `backend/`
 
-## Puesta en marcha (Windows)
+## Run locally
+Copy `.env.example` to `.env` and add your Meta Model API key (server side only, never committed). Then follow `backend/README.md` and `frontend/README.md`. Demo data is seeded on startup from `backend/app/db.py`.
 
-```bat
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-copy .env.example .env
-rem edita .env y pon tu META_API_KEY
-streamlit run app.py
-python smoke_test.py
-```
+## What is new vs. prior
+- Prior: the concept and design (a private MVP created before the event, and the author's master's thesis proposal).
+- During the hackathon: [all code in this repository, confirm before keeping this line].
+- Built with Muse Code and Muse Spark 1.3.
 
-Docs oficiales: `https://dev.meta.ai/docs/quickstart`
-(`base_url=https://api.meta.ai/v1`, modelo `muse-spark-1.3`).
-
-## Frontend (etapa 1)
-
-App React + Vite en `frontend/` (ver `frontend/README.md`):
-
-```bat
-cd frontend
-npm install
-npm run dev
-```
-
-Abrir http://localhost:5173. Etapa 1: solo datos demo, sin backend.
-
-## Backend (etapa 2)
-
-API FastAPI en `backend/` (ver `backend/README.md`):
-
-```bat
-pip install -r requirements.txt
-venv\Scripts\python.exe -m uvicorn backend.app.main:app --port 8000
-venv\Scripts\python.exe -m pytest backend\tests -q
-```
-
-Docs en http://localhost:8000/docs. Requiere `META_API_KEY` en `.env`
-para llamadas reales a Spark.
+## Limits and roadmap
+Single organization, demo data. Next: multi-organization support, visual inspection with SAM 3.1, industrial pilots.
