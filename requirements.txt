@@ -1,0 +1,9 @@
+openai
+pydantic
+streamlit
+python-dotenv
+fastapi
+python-multipart
+uvicorn
+httpx
+pytest
