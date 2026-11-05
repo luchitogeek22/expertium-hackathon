@@ -32,8 +32,8 @@ Averages over  demo cases:
 
 | Metric | Result |
 |---|---|
-| Cost per case | $ |
-| Latency per agent step | s |
+| Cost per case | $0.008|
+| Latency per agent step | 10.2 s |
 | Backend tests | passing (`cd backend && pytest`) |
 
 ## Run locally
