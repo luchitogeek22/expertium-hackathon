@@ -4,7 +4,7 @@ Expertium turns a manufacturing nonconformity into a traceable quality record: a
 
 Built solo by Luis Herrera (Peru) for the Meta Global AI Developer Hackathon, Indie track.
 
-**Live demo:**  · **3-minute video:** 
+**Live demo:**   **3-minute video:** 
 
 ## The problem
 
@@ -24,7 +24,7 @@ flowchart LR
   NCR[Nonconformity] --> K[Knowledge] --> Q[Quality] --> C[CAPA] --> H{Human approval} --> A[Audit log]
 ```
 
-**Example case:** : one real demo case, from input to final record, in 3–4 lines (add a screenshot).
+**Example case:** : one real demo case, from input to final record, in 3–4 lines 
 
 ## Measured results
 
@@ -33,8 +33,8 @@ Averages over  demo cases:
 | Metric | Result |
 |---|---|
 | Cost per case | $ |
-| Latency per agent step | TODO s |
-| Backend tests | TODO passing (`cd backend && pytest`) |
+| Latency per agent step | s |
+| Backend tests | passing (`cd backend && pytest`) |
 
 ## Run locally
 
