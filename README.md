@@ -4,7 +4,7 @@ Expertium turns a manufacturing nonconformity into a traceable quality record: a
 
 Built solo by Luis Herrera (Peru) for the Meta Global AI Developer Hackathon, Indie track.
 
-**Live demo:** TODO · **3-minute video:** TODO
+**Live demo:**  · **3-minute video:** 
 
 ## The problem
 
@@ -24,15 +24,15 @@ flowchart LR
   NCR[Nonconformity] --> K[Knowledge] --> Q[Quality] --> C[CAPA] --> H{Human approval} --> A[Audit log]
 ```
 
-**Example case:** TODO: one real demo case, from input to final record, in 3–4 lines (add a screenshot).
+**Example case:** : one real demo case, from input to final record, in 3–4 lines (add a screenshot).
 
 ## Measured results
 
-Averages over TODO demo cases:
+Averages over  demo cases:
 
 | Metric | Result |
 |---|---|
-| Cost per case | $TODO |
+| Cost per case | $ |
 | Latency per agent step | TODO s |
 | Backend tests | TODO passing (`cd backend && pytest`) |
 
@@ -45,7 +45,7 @@ Averages over TODO demo cases:
 ## What's new compared to previous work
 
 - **Before the event:** the concept and design (a private MVP built before the event, and the author's master's thesis proposal).
-- **During the hackathon:** TODO: list 3–5 concrete things built (e.g. each agent, structured outputs, hash-chained audit, approval flow, frontend integration). All code in this repository was written during the event.
+- **During the hackathon:** : list 3–5 concrete things built (e.g. each agent, structured outputs, hash-chained audit, approval flow, frontend integration). All code in this repository was written during the event.
 - **Built with** Muse Code and Muse Spark 1.3 (Meta Model API).
 
 ## Limitations and roadmap
