@@ -36,6 +36,8 @@ Averages over  demo cases:
 | Latency per agent step | 10.2 s |
 | Backend tests | passing (`cd backend && pytest`) |
 
+conclude:It demonstrates high operational efficiency and economic viability, processing complex cases at an ultra-low cost of $0.008 USD per process. Furthermore, the average latency of 10.2 seconds per agent validates the speed of the automated multi-agent workflow compared to traditional manual auditing.
+
 ## Run locally
 
 1. Copy `.env.example` to `.env` and add your Meta Model API key (server-side only, never committed).
